@@ -1,0 +1,580 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+@font-face {
+  font-family: "Yeseva One";
+  src: url("./fonts/YesevaOne-Regular.ttf");
+}
+@font-face {
+  font-family: "PT Serif-Bold";
+  src: url("./fonts/PTSerif-Bold.woff");
+}
+@font-face {
+  font-family: "PT Serif-Regular";
+  src: url("./fonts/PTSerif-Regular.woff");
+}
+
+//////////
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2.67px;
+  background: #696969;
+  margin: 5px 0;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.img-brain {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.main {
+  background: url("./img/backgroundQuiz.png");
+  width: 100%;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+}
+.main p {
+  padding: 27px 0 13px;
+}
+.main-text {
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffc700;
+  padding: 0 20px;
+}
+.button {
+  font-family: "Merriweather";
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0d0c11;
+  border-radius: 20px;
+  background: radial-gradient(50% 50% at 50% 50%, #ffc700 0%, #ffc700 100%);
+  padding: 13.05px 36px 10.25px;
+}
+
+.button-quiz__enabled {
+  position: absolute;
+  bottom: 28px;
+
+  pointer-events: all;
+}
+.button-quiz__disabled {
+  position: absolute;
+  bottom: 28px;
+  background: #dadada;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+  font-family: "Merriweather";
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #8e8e8e;
+  pointer-events: none;
+}
+.text-advertising {
+  font-family: "PT Serif-Bold";
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin: 22px 0 11px 0;
+}
+.text-advertising-1 {
+  color: #ffc700;
+}
+
+.button-open-details button {
+  background: #ffffff;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+.button-open-details {
+  font-family: "PT Serif-Bold";
+  font-size: 8px;
+  line-height: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 11px 0;
+}
+.button-arrow {
+  width: 100%;
+  height: 100%;
+  background: url("./img/arrow.svg") no-repeat;
+  background-position: center;
+  margin-bottom: 3px;
+}
+
+.text-comment-items {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Yeseva One";
+  padding: 0 36px;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  background: radial-gradient(
+    84.34% 50.29% at 48.75% 49.71%,
+    #2950c2 0%,
+    rgba(38, 91, 199, 0.96) 40.62%,
+    rgba(39, 98, 187, 0) 85.42%
+  );
+}
+.text-comment {
+  padding: 83px 0;
+  background: url("./img/Rectangle.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.brain-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 38px 0;
+}
+.text-block {
+  padding: 0px 12px;
+  margin: 38px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "PT Serif-Regular";
+  letter-spacing: 0.05em;
+  color: #272727;
+}
+.text-block span {
+  overflow-wrap: break-word;
+  font-family: "PT Serif-bold";
+  text-transform: uppercase;
+}
+
+.text-block p {
+  display: inline;
+  font-family: "PT Serif-bold";
+}
+.brain-img {
+  display: block;
+  margin: 0 auto;
+}
+.quiz-block {
+  display: none;
+  position: absolute;
+  background: url("./img/backgroundQuiz.png");
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.header img {
+  width: 48px;
+  height: 47px;
+  padding: 0 9px;
+}
+.header-information {
+  display: flex;
+  align-items: center;
+}
+.header-text {
+  font-family: "Yeseva One";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffc700;
+}
+.header-text-result {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 15px;
+}
+.progress-block {
+  padding: 17px 30px 33px;
+}
+.progress-container {
+  width: 100%;
+  height: 11px;
+  background-color: rgba(242, 243, 243, 0.59);
+  position: relative;
+  border-radius: 10.5px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #3bde7c;
+  border-radius: 10.5px;
+  position: absolute;
+}
+.question-div {
+  font-family: "PT Serif-Regular";
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin: 12px 0;
+}
+.content-item {
+}
+
+.content-block {
+}
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background: rgba(242, 243, 243, 0.15);
+  margin-bottom: 10px;
+}
+
+.radio-answer {
+  width: 0;
+  height: 0;
+}
+
+.wrappe-button {
+  display: flex;
+  justify-content: center;
+}
+
+.set-squares {
+  width: 75px;
+  height: 75px;
+}
+
+.content-block__squares {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  padding: 20px 26px 30px;
+}
+
+.test-image {
+  display: block;
+  margin: 0 auto;
+  padding: 23px 0;
+  height: 32vh;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.block-figure-test {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.figure-item {
+  width: 41px;
+  height: 42px;
+  background: #ffffff;
+  font-family: "PT Serif-Regular";
+  font-size: 20px;
+  line-height: 49px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #0d0c11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-figure-test .active-element {
+  background: #ffffff !important;
+  border: 6px solid #ffc700;
+}
+
+.content-block .active-element {
+  background: #ffc700;
+  color: #272727;
+}
+.active-element label::after {
+  background: #2950c2 !important;
+}
+.content-block__squares .active-element {
+  border: 6px solid #ffc700;
+}
+
+.header-text-result {
+  font-family: "Yeseva One";
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.block-bottom {
+  background: url("./img/backgroundBottom.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Merriweather";
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.block-text__bottom * {
+  display: inline;
+}
+.block-text__bottom {
+  padding: 45px 0 17px 20px;
+  margin: 0 25px;
+}
+.block-text__bottom span {
+  color: #ffc700;
+}
+.block-text__bottom div {
+  font-weight: 900;
+}
+
+.block-text__bottom2 * {
+  display: inline;
+}
+.block-text__bottom2 {
+  margin: 0 33px 33px 33px;
+  color: #000000;
+  background: rgba(243, 243, 242, 0.8);
+  border-radius: 20px;
+  padding: 25px 15px;
+}
+.button-bottom {
+  background: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: block;
+}
+.text__bottom {
+  font-family: "Roboto";
+  font-size: 10px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 25px 0 10px;
+}
+
+.block-items-bottum {
+  font-family: "PT Serif-Regular";
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.summarizing-text1 {
+  font-family: "PT Serif-Bold";
+  font-size: 15px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 18px;
+}
+.summarizing-text2 {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: lowercase;
+  margin: 13px 34px 22px;
+}
+.summarizing-text3 {
+  font-family: "PT Serif-Bold";
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3bde7c;
+}
+.summarizing-text4 {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #1c2741;
+  border-radius: 6px;
+  padding: 12px 15px 10.8px;
+  margin: 12px 30px;
+}
+.summarizing-text5 {
+  font-family: "PT Serif-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  color: #3bde7c;
+}
+.block-timer {
+  font-family: "PT Serif-Regular";
+  font-size: 11px;
+  line-height: 30px;
+  text-transform: lowercase;
+  color: #3bde7c;
+  display: flex;
+  gap: 12px;
+}
+.timer {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+.block-button-result {
+  max-width: 290px;
+  background: #eb1b00;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.block-button-result:hover {
+  background: #d72d17;
+}
+.text-result-button {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  color: #ffffff;
+  padding: 30px 22px 15px 65px;
+  max-width: 290px;
+}
+.block-button-result::before {
+  content: "";
+  position: absolute;
+  background: url("./img/call.svg") no-repeat;
+  width: 29px;
+  height: 29px;
+  top: 50%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/////////////
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="checkbox"] + label {
+  padding: 0 0 0 60px;
+}
+
+input[type="radio"] + label {
+  padding: 0 0 0 57px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: rgb(255, 100, 100);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  position: absolute;
+
+  left: 16px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #cdd1da;
+  border-radius: 50%;
+}
+
+input[type="checkbox"] + label:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: #9fd468;
+}
+
+input[type="checkbox"]:checked + label:after {
+  left: 27px;
+}
+
+input[type="radio"] + label:after {
+  content: "";
+  position: absolute;
+
+  left: 12px;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: rgb(165, 165, 165);
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label:after {
+  opacity: 1;
+  left: 16px;
+  width: 22px;
+  height: 22px;
+}
